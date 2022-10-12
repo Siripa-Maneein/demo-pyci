@@ -28,13 +28,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Upload coverage to Codecov
     - uses: codecov/codecov-action@v3
-      with:
-        files: ./coverage1.xml,./coverage2.xml # optional
-        flags: unittests # optional
-        name: codecov-umbrella # optional
-        fail_ci_if_error: true # optional (default = false)
-        verbose: true # optional (default = false)
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
