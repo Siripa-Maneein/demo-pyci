@@ -30,6 +30,11 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
+      with:
+        directory: ./coverage/reports/
+        flags: unittests
+        path_to_write_report: ./coverage/codecov_report.txt
+        verbose: true
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
