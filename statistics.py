@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 def average(data):
     """Return the average of a list of numeric values in data."""
     if len(data)==0:
@@ -37,6 +40,7 @@ def variance(data):
         raise ValueError("List must contain at least one value")
     avg = average(data)
     return sum( [(x-avg)**2 for x in data] )/n
+
 
 def stdev(data):
     """The population standard deviation of a list of data values."""
