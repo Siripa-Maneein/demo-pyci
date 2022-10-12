@@ -32,7 +32,7 @@ jobs:
       run: |
         curl -Os https://uploader.codecov.io/latest/macos/codecov
         chmod +x codecov
-        ./codecov -t ${CODECOV_TOKEN}
+        ./codecov -t ${CODECOV_TOKEN=c4fe8ef1-baab-4088-9031-9adb84a09277}
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
     - name: Lint with flake8
