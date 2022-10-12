@@ -7,6 +7,7 @@ def average(data):
         raise ValueError("List must contain at least one value")
     return sum(data)/len(data)
 
+
 def variance(data):
     """Return the population variance of a list of numbers in data.
 
