@@ -46,4 +46,5 @@ jobs:
       run: |
         coverage run -m unittest discover -p "*_test.py"
     - name: Send result to Codecov
+      run: |
         bash <(curl -s https://codecov.io/bash)
